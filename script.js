@@ -1,3 +1,4 @@
+
 // Pequeñas animaciones de scroll (ejemplo)
 document.addEventListener("scroll", () => {
   const elements = document.querySelectorAll(".service-card");
