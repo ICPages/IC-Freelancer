@@ -73,31 +73,17 @@
     .todochido-ad {
       background-color: #0a0a0a;
       color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.2rem 1.5rem;
       border-radius: 1rem;
       box-shadow: 0 0 20px rgba(57, 255, 20, 0.25);
       animation: fadeIn 1s ease-in-out;
-      flex-wrap: wrap;
-      gap: 1rem;
+      padding: 1rem 1.2rem;
+      font-family: 'Rationale', sans-serif;
+      text-align: center; /* mantiene todo centrado por defecto */
     }
 
-    /* Columna izquierda */
-    .todochido-left {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex: 1 1 250px;
-    }
-
-    .todochido-left a {
-      display: inline-block;
-    }
-
+    /* Izquierda */
     .todochido-left img.logo {
-      width: 80px;
+      width: 75px;
       border-radius: 0.5rem;
       animation: floatLogo 3s ease-in-out infinite;
       transition: transform 0.4s;
@@ -107,17 +93,11 @@
       transform: scale(1.08);
     }
 
-    .todochido-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
     .todochido-text h1 {
       font-family: 'Manufacturing Consent', sans-serif;
       color: #39ff14;
-      font-size: 2rem;
-      letter-spacing: 1.5px;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
       margin: 0;
       animation: glow 2s infinite alternate;
     }
@@ -125,17 +105,15 @@
     .todochido-text p {
       font-family: 'Courgette', cursive;
       color: #b0b0b0;
-      font-size: 1.1rem;
-      margin: 0.2rem 0 0 0;
+      font-size: 1rem;
+      margin: 0;
     }
 
     /* Centro */
     .todochido-center {
-      flex: 1 1 300px;
       text-align: center;
-      font-family: 'Rationale', sans-serif;
+      font-size: 1.15rem;
       color: #8a2be2;
-      font-size: 1.25rem;
       animation: pulse 2s infinite;
       line-height: 1.4;
     }
@@ -147,126 +125,96 @@
 
     /* Derecha */
     .todochido-right {
-      flex: 1 1 300px;
       display: flex;
       justify-content: center;
-      gap: 0.6rem;
-      flex-wrap: wrap;
+      gap: 0.5rem;
+      flex-wrap: nowrap;
     }
 
-    .todochido-right a img {
-      background-color: transparent;
-      width: 95px;
+    .todochido-right img {
+      width: 70px;
       border-radius: 0.6rem;
-      transition: transform 0.4s, box-shadow 0.4s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .todochido-right a img:hover {
-      background-color: transparent;
+    .todochido-right img:hover {
       transform: scale(1.07);
-      box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+      box-shadow: 0 0 12px rgba(138, 43, 226, 0.6);
     }
 
     /* Animaciones */
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes glow {
-      from {
-        text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
-      }
-      to {
-        text-shadow: 0 0 20px #8a2be2, 0 0 40px #8a2be2;
-      }
+      from { text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14; }
+      to { text-shadow: 0 0 20px #8a2be2, 0 0 40px #8a2be2; }
     }
 
     @keyframes pulse {
-      0%, 100% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.7;
-      }
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.75; }
     }
 
     @keyframes floatLogo {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-6px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
     }
 
     /* Responsivo */
-    @media (max-width: 768px) {
-      .todochido-ad {
-        flex-direction: column;
-        text-align: center;
+    @media (min-width: 992px) {
+      .todochido-right img {
+        width: 80px; /* tamaño justo para que quepan las 4 */
       }
+    }
 
-      .todochido-left, .todochido-center, .todochido-right {
+    @media (max-width: 768px) {
+      .todochido-right {
+        flex-wrap: wrap;
         justify-content: center;
       }
-
-      .todochido-left {
-        flex-direction: column;
+      .todochido-right img {
+        width: 60px;
       }
-
-      .todochido-right a img {
-        width: 80px;
-      }
-
       .todochido-center {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
-
       .todochido-center strong {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
       }
     }
   </style>
 
-  <div class="todochido-ad">
-    <!-- Izquierda -->
-    <div class="todochido-left">
-      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
-        <img src="logo.jpg" alt="Logo Todo Chido" class="logo" />
-      </a>
-      <div class="todochido-text">
-        <h1>Todo Chido</h1>
-        <p>Exprésate con tu ropa</p>
+  <div class="container-fluid todochido-ad d-flex flex-column align-items-center">
+    <div class="row align-items-center justify-content-center g-2 w-100">
+      
+      <!-- Izquierda -->
+      <div class="col-12 col-md-4 d-flex flex-column flex-md-row align-items-center justify-content-center todochido-left">
+        <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank" class="me-md-2 mb-2 mb-md-0">
+          <img src="logo.jpg" alt="Logo Todo Chido" class="logo" />
+        </a>
+        <div class="todochido-text text-center text-md-start">
+          <h1>Todo Chido</h1>
+          <p>Exprésate con tu ropa</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Centro -->
-    <div class="todochido-center">
-      15% de descuento en toda la tienda usando el cupón:<br />
-      <strong>Freelancer15</strong>
-    </div>
+      <!-- Centro -->
+      <div class="col-12 col-md-4 todochido-center">
+        15% de descuento en toda la tienda usando el cupón:<br />
+        <strong>Freelancer15</strong>
+      </div>
 
-    <!-- Derecha -->
-    <div class="todochido-right">
-      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
-        <img src="prenda1.png" alt="Prenda 1" />
-      </a>
-      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
-        <img src="prenda2.png" alt="Prenda 2" />
-      </a>
-      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
-        <img src="prenda3.png" alt="Prenda 3" />
-      </a>
-      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
-        <img src="prenda4.png" alt="Prenda 4" />
-      </a>
+      <!-- Derecha -->
+      <div class="col-12 col-md-4 col-lg-5 todochido-right">
+        <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda5.png" alt="Prenda 5"></a>
+        <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda6.png" alt="Prenda 6"></a>
+        <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda7.png" alt="Prenda 7"></a>
+        <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda8.png" alt="Prenda 8"></a>
+      </div>
+
     </div>
   </div>
 </div>
@@ -405,31 +353,17 @@
     .todochido-ad {
       background-color: #0a0a0a;
       color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.2rem 1.5rem;
       border-radius: 1rem;
       box-shadow: 0 0 20px rgba(57, 255, 20, 0.25);
       animation: fadeIn 1s ease-in-out;
-      flex-wrap: wrap;
-      gap: 1rem;
+      padding: 1rem 1.2rem;
+      font-family: 'Rationale', sans-serif;
+      text-align: center; /* mantiene todo centrado por defecto */
     }
 
-    /* Columna izquierda */
-    .todochido-left {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex: 1 1 250px;
-    }
-
-    .todochido-left a {
-      display: inline-block;
-    }
-
+    /* Izquierda */
     .todochido-left img.logo {
-      width: 80px;
+      width: 75px;
       border-radius: 0.5rem;
       animation: floatLogo 3s ease-in-out infinite;
       transition: transform 0.4s;
@@ -439,17 +373,11 @@
       transform: scale(1.08);
     }
 
-    .todochido-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
     .todochido-text h1 {
       font-family: 'Manufacturing Consent', sans-serif;
       color: #39ff14;
-      font-size: 2rem;
-      letter-spacing: 1.5px;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
       margin: 0;
       animation: glow 2s infinite alternate;
     }
@@ -457,17 +385,15 @@
     .todochido-text p {
       font-family: 'Courgette', cursive;
       color: #b0b0b0;
-      font-size: 1.1rem;
-      margin: 0.2rem 0 0 0;
+      font-size: 1rem;
+      margin: 0;
     }
 
     /* Centro */
     .todochido-center {
-      flex: 1 1 300px;
       text-align: center;
-      font-family: 'Rationale', sans-serif;
+      font-size: 1.15rem;
       color: #8a2be2;
-      font-size: 1.25rem;
       animation: pulse 2s infinite;
       line-height: 1.4;
     }
@@ -479,126 +405,96 @@
 
     /* Derecha */
     .todochido-right {
-      flex: 1 1 300px;
       display: flex;
       justify-content: center;
-      gap: 0.6rem;
-      flex-wrap: wrap;
+      gap: 0.5rem;
+      flex-wrap: nowrap;
     }
 
-    .todochido-right a img {
-      background-color: transparent;
-      width: 95px;
+    .todochido-right img {
+      width: 70px;
       border-radius: 0.6rem;
-      transition: transform 0.4s, box-shadow 0.4s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .todochido-right a img:hover {
-      background-color: transparent;
+    .todochido-right img:hover {
       transform: scale(1.07);
-      box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+      box-shadow: 0 0 12px rgba(138, 43, 226, 0.6);
     }
 
     /* Animaciones */
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes glow {
-      from {
-        text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
-      }
-      to {
-        text-shadow: 0 0 20px #8a2be2, 0 0 40px #8a2be2;
-      }
+      from { text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14; }
+      to { text-shadow: 0 0 20px #8a2be2, 0 0 40px #8a2be2; }
     }
 
     @keyframes pulse {
-      0%, 100% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.7;
-      }
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.75; }
     }
 
     @keyframes floatLogo {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-6px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
     }
 
     /* Responsivo */
-    @media (max-width: 768px) {
-      .todochido-ad {
-        flex-direction: column;
-        text-align: center;
+    @media (min-width: 992px) {
+      .todochido-right img {
+        width: 80px; /* tamaño justo para que quepan las 4 */
       }
+    }
 
-      .todochido-left, .todochido-center, .todochido-right {
+    @media (max-width: 768px) {
+      .todochido-right {
+        flex-wrap: wrap;
         justify-content: center;
       }
-
-      .todochido-left {
-        flex-direction: column;
+      .todochido-right img {
+        width: 60px;
       }
-
-      .todochido-right a img {
-        width: 80px;
-      }
-
       .todochido-center {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
-
       .todochido-center strong {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
       }
     }
   </style>
 
-  <div class="todochido-ad">
-    <!-- Izquierda -->
-    <div class="todochido-left">
-      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
-        <img src="logo.jpg" alt="Logo Todo Chido" class="logo" />
-      </a>
-      <div class="todochido-text">
-        <h1>Todo Chido</h1>
-        <p>Exprésate con tu ropa</p>
+  <div class="container-fluid todochido-ad d-flex flex-column align-items-center">
+    <div class="row align-items-center justify-content-center g-2 w-100">
+      
+      <!-- Izquierda -->
+      <div class="col-12 col-md-4 d-flex flex-column flex-md-row align-items-center justify-content-center todochido-left">
+        <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank" class="me-md-2 mb-2 mb-md-0">
+          <img src="logo.jpg" alt="Logo Todo Chido" class="logo" />
+        </a>
+        <div class="todochido-text text-center text-md-start">
+          <h1>Todo Chido</h1>
+          <p>Exprésate con tu ropa</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Centro -->
-    <div class="todochido-center">
-      15% de descuento en toda la tienda usando el cupón:<br />
-      <strong>Freelancer15</strong>
-    </div>
+      <!-- Centro -->
+      <div class="col-12 col-md-4 todochido-center">
+        15% de descuento en toda la tienda usando el cupón:<br />
+        <strong>Freelancer15</strong>
+      </div>
 
-    <!-- Derecha -->
-    <div class="todochido-right">
-      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
-        <img src="prenda5.png" alt="Prenda 5" />
-      </a>
-      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
-        <img src="prenda6.png" alt="Prenda 6" />
-      </a>
-      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
-        <img src="prenda7.png" alt="Prenda 7" />
-      </a>
-      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
-        <img src="prenda8.png" alt="Prenda 8" />
-      </a>
+      <!-- Derecha -->
+      <div class="col-12 col-md-4 col-lg-5 todochido-right">
+        <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda5.png" alt="Prenda 5"></a>
+        <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda6.png" alt="Prenda 6"></a>
+        <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda7.png" alt="Prenda 7"></a>
+        <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda8.png" alt="Prenda 8"></a>
+      </div>
+
     </div>
   </div>
 </div>
