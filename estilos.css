@@ -1,4 +1,4 @@
-
+/* ====== ESTILOS BASE ====== */
 body {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
@@ -39,7 +39,7 @@ body {
   to { opacity: 1; }
 }
 
-/* Estilo para los espacios publicitarios vacíos */
+/* Espacios publicitarios vacíos */
 .ad-space {
   min-height: 120px;
   background: transparent;
@@ -47,7 +47,7 @@ body {
   margin: 24px 0;
 }
 
-/* Botón de volver */
+/* Botón volver */
 .btn-back {
   display: inline-flex;
   align-items: center;
@@ -72,4 +72,126 @@ footer a {
 footer a:hover {
   text-decoration: none;
   color: blue;
+}
+
+/* ====== BLOQUE TODOCHIDO AD ====== */
+.todochido-ad {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.25);
+  animation: fadeIn 1s ease-in-out;
+  padding: 1rem 1.2rem;
+  font-family: 'Rationale', sans-serif;
+}
+
+/* Izquierda */
+.todochido-left img.logo {
+  width: 75px;
+  border-radius: 0.5rem;
+  animation: floatLogo 3s ease-in-out infinite;
+  transition: transform 0.4s;
+}
+
+.todochido-left img.logo:hover {
+  transform: scale(1.08);
+}
+
+.todochido-text h1 {
+  font-family: 'Manufacturing Consent', sans-serif;
+  color: #39ff14;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin: 0;
+  animation: glow 2s infinite alternate;
+}
+
+.todochido-text p {
+  font-family: 'Courgette', cursive;
+  color: #b0b0b0;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Centro */
+.todochido-center {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #8a2be2;
+  animation: pulse 2s infinite;
+  line-height: 1.4;
+}
+
+.todochido-center strong {
+  color: #39ff14;
+  font-size: 1.3rem;
+}
+
+/* Derecha */
+.todochido-right {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+}
+
+.todochido-right img {
+  width: 80px;
+  border-radius: 0.6rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.todochido-right img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 12px rgba(138, 43, 226, 0.6);
+}
+
+/* Animaciones */
+@keyframes glow {
+  from { text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14; }
+  to { text-shadow: 0 0 20px #8a2be2, 0 0 40px #8a2be2; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.75; }
+}
+
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .todochido-ad {
+    text-align: center;
+    padding: 0.8rem;
+  }
+
+  .todochido-left {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .todochido-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .todochido-right img {
+    width: 65px;
+  }
+
+  .todochido-center {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .todochido-center strong {
+    font-size: 1.15rem;
+  }
 }
