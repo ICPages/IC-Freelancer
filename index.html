@@ -26,7 +26,6 @@
           <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
           <li class="nav-item"><a class="nav-link" href="#asesorias">Asesorías</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Portafolio</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
         </ul>
       </div>
@@ -61,6 +60,217 @@
   </div>
 </section>
 
+<!-- Espacio publicitario -->
+<div class="ad-space" aria-label="Espacio publicitario">
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courgette&family=Manufacturing+Consent&family=Rationale&family=Rock+Salt&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    .todochido-ad {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(57, 255, 20, 0.25);
+      animation: fadeIn 1s ease-in-out;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* Columna izquierda */
+    .todochido-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex: 1 1 250px;
+    }
+
+    .todochido-left a {
+      display: inline-block;
+    }
+
+    .todochido-left img.logo {
+      width: 80px;
+      border-radius: 0.5rem;
+      animation: floatLogo 3s ease-in-out infinite;
+      transition: transform 0.4s;
+    }
+
+    .todochido-left img.logo:hover {
+      transform: scale(1.08);
+    }
+
+    .todochido-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .todochido-text h1 {
+      font-family: 'Manufacturing Consent', sans-serif;
+      color: #39ff14;
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+      margin: 0;
+      animation: glow 2s infinite alternate;
+    }
+
+    .todochido-text p {
+      font-family: 'Courgette', cursive;
+      color: #b0b0b0;
+      font-size: 1.1rem;
+      margin: 0.2rem 0 0 0;
+    }
+
+    /* Centro */
+    .todochido-center {
+      flex: 1 1 300px;
+      text-align: center;
+      font-family: 'Rationale', sans-serif;
+      color: #8a2be2;
+      font-size: 1.25rem;
+      animation: pulse 2s infinite;
+      line-height: 1.4;
+    }
+
+    .todochido-center strong {
+      color: #39ff14;
+      font-size: 1.3rem;
+    }
+
+    /* Derecha */
+    .todochido-right {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .todochido-right a img {
+      background-color: transparent;
+      width: 95px;
+      border-radius: 0.6rem;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .todochido-right a img:hover {
+      background-color: transparent;
+      transform: scale(1.07);
+      box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+      }
+      to {
+        text-shadow: 0 0 20px #8a2be2, 0 0 40px #8a2be2;
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.7;
+      }
+    }
+
+    @keyframes floatLogo {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .todochido-ad {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .todochido-left, .todochido-center, .todochido-right {
+        justify-content: center;
+      }
+
+      .todochido-left {
+        flex-direction: column;
+      }
+
+      .todochido-right a img {
+        width: 80px;
+      }
+
+      .todochido-center {
+        font-size: 1.1rem;
+      }
+
+      .todochido-center strong {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+
+  <div class="todochido-ad">
+    <!-- Izquierda -->
+    <div class="todochido-left">
+      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
+        <img src="logo.jpg" alt="Logo Todo Chido" class="logo" />
+      </a>
+      <div class="todochido-text">
+        <h1>Todo Chido</h1>
+        <p>Exprésate con tu ropa</p>
+      </div>
+    </div>
+
+    <!-- Centro -->
+    <div class="todochido-center">
+      15% de descuento en toda la tienda usando el cupón:<br />
+      <strong>Freelancer15</strong>
+    </div>
+
+    <!-- Derecha -->
+    <div class="todochido-right">
+      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
+        <img src="prenda1.png" alt="Prenda 1" />
+      </a>
+      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
+        <img src="prenda2.png" alt="Prenda 2" />
+      </a>
+      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
+        <img src="prenda3.png" alt="Prenda 3" />
+      </a>
+      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
+        <img src="prenda4.png" alt="Prenda 4" />
+      </a>
+    </div>
+  </div>
+</div>
+
   <!-- Servicios -->
   <section id="services" class="py-5">
     <div class="container text-center">
@@ -68,49 +278,55 @@
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card h-100 shadow service-card">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title fw-bold">Diseño y Desarrollo Web</h5>
               <p class="card-text">Diseño y desarrollo de sitios web funcionales y atractivos, usando HTML, CSS y JavaScript, enfocados en experiencia de usuario y objetivos de negocio.</p>
+              <a href="servicio1.html" class="btn btn-outline-primary mt-auto">Más información</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100 shadow service-card">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title fw-bold">Clases Online</h5>
               <p class="card-text">Formación personalizada en áreas como programación, matemáticas y herramientas digitales, con sesiones virtuales adaptadas a tu ritmo y objetivos.</p>
+              <a href="servicio2.html" class="btn btn-outline-primary mt-auto">Más información</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100 shadow service-card">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title fw-bold">Soporte & Automatización Remota para PC</h5>
               <p class="card-text">Resolución de problemas técnicos, optimización de software y automatización de tareas a través de soporte remoto, asegurando eficiencia desde cualquier lugar.</p>
+              <a href="servicio3.html" class="btn btn-outline-primary mt-auto">Más información</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100 shadow service-card">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title fw-bold">Producción y Edición de Videos</h5>
               <p class="card-text">Creación y edición profesional de videos para redes sociales, presentaciones o proyectos personales, adaptados a tu estilo y necesidades.</p>
+              <a href="servicio4.html" class="btn btn-outline-primary mt-auto">Más información</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100 shadow service-card">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title fw-bold">Diseño Publicitario y Branding</h5>
               <p class="card-text">Diseño de elementos visuales y publicitarios, desde logos y menús hasta portadas y contenidos para redes sociales, ayudando a potenciar la imagen de tu marca.</p>
+              <a href="servicio5.html" class="btn btn-outline-primary mt-auto">Más información</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100 shadow service-card">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title fw-bold">Asesorías en Proyectos Académicos</h5>
               <p class="card-text">Apoyo especializado en la planificación, desarrollo y revisión de proyectos académicos, garantizando claridad, calidad y cumplimiento de objetivos.</p>
+              <a href="servicio6.html" class="btn btn-outline-primary mt-auto">Más información</a>
             </div>
           </div>
         </div>
@@ -172,98 +388,288 @@
             </div>
           </div>
         </div>
-        <!-- Curso 4 -->
-        <div class="col-md-4">
-          <div class="card h-100 shadow border-0">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">SolidWorks desde Cero</h5>
-              <p class="card-text">Aprende a diseñar y modelar piezas y ensamblajes en 3D. Ideal para estudiantes e ingenieros que quieran adquirir habilidades en diseño mecánico digital.</p>
-              <ul class="list-unstyled">
-                <li><strong>Modalidad:</strong> Online.</li>
-                <li><strong>Fecha:</strong> Próximamente.</li>
-                <li><strong>Duración:</strong> Por definir.</li>
-                <li><strong>Costo:</strong> Por definir.</li>
-              </ul>
-              <a href="mailto:imercoriasanchez@gmail.com?subject=Registro Curso C#" class="btn btn-primary w-100">Registrarme</a>
-            </div>
-          </div>
-        </div>
-        <!-- Curso 5 -->
-        <div class="col-md-4">
-          <div class="card h-100 shadow border-0">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Electrónica & MultiSim</h5>
-              <p class="card-text">Aprende los conceptos básicos de electrónica y circuitos eléctricos utilizando Multisim para simulaciones y análisis de tus proyectos. Ideal para estudiantes que quieren entender y practicar circuitos de manera virtual, con asesoría especializada para tus proyectos académicos.</p>
-              <ul class="list-unstyled">
-                <li><strong>Modalidad:</strong> Online.</li>
-                <li><strong>Fecha:</strong> Próximamente.</li>
-                <li><strong>Duración:</strong> Por definir.</li>
-                <li><strong>Costo:</strong> Por definir.</li>
-              </ul>
-              <a href="mailto:imercoriasanchez@gmail.com?subject=Registro Curso C#" class="btn btn-primary w-100">Registrarme</a>
-            </div>
-          </div>
-        </div>
-        <!-- Curso 6 -->
-        <div class="col-md-4">
-          <div class="card h-100 shadow border-0">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Asesorías Personalizadas</h5>
-              <p class="card-text">Sesiones privadas diseñadas para resolver tus dudas en programación, electrónica, matemáticas o incluso para tomar un curso completo de manera individual, adaptado a tu ritmo y necesidades específicas.</p>
-              <ul class="list-unstyled">
-                <li><strong>Modalidad:</strong> Online.</li>
-                <li><strong>Fecha:</strong> Próximamente.</li>
-                <li><strong>Duración:</strong> Por definir.</li>
-                <li><strong>Costo:</strong> Por definir.</li>
-              </ul>
-              <a href="mailto:imercoriasanchez@gmail.com?subject=Solicitud Asesoría" class="btn btn-success w-100">Solicitar</a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Portafolio -->
-  <section id="portfolio" class="py-5">
-    <div class="container text-center">
-      <h2 class="fw-bold mb-5">Portafolio</h2>
-      <p class="lead">Aquí mostraré algunos de mis proyectos.</p>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card shadow">
-            <a href="https://icpages.github.io/TodoChido/" target="_blank"> <img src="Proyecto 1.png" class="card-img-top" alt="Todo Chido"> </a>
-            <div class="card-body">
-              <h5 class="card-title">Todo Chido</h5> </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card shadow">
-            <a href="https://icpages.github.io/Servicios-Tecnologicos/" target="_blank"> <img src="Proyecto 2.png" class="card-img-top" alt="Tecnológico | Servicios"> </a>
-            <div class="card-body">
-              <h5 class="card-title">Tecnológico | Servicios</h5> </a>
-            </div>
-          </div>
-        </div>
-        <!-- Agregar más proyectos -->
+<!-- Espacio publicitario -->
+<div class="ad-space" aria-label="Espacio publicitario">
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courgette&family=Manufacturing+Consent&family=Rationale&family=Rock+Salt&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    .todochido-ad {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(57, 255, 20, 0.25);
+      animation: fadeIn 1s ease-in-out;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* Columna izquierda */
+    .todochido-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex: 1 1 250px;
+    }
+
+    .todochido-left a {
+      display: inline-block;
+    }
+
+    .todochido-left img.logo {
+      width: 80px;
+      border-radius: 0.5rem;
+      animation: floatLogo 3s ease-in-out infinite;
+      transition: transform 0.4s;
+    }
+
+    .todochido-left img.logo:hover {
+      transform: scale(1.08);
+    }
+
+    .todochido-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .todochido-text h1 {
+      font-family: 'Manufacturing Consent', sans-serif;
+      color: #39ff14;
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+      margin: 0;
+      animation: glow 2s infinite alternate;
+    }
+
+    .todochido-text p {
+      font-family: 'Courgette', cursive;
+      color: #b0b0b0;
+      font-size: 1.1rem;
+      margin: 0.2rem 0 0 0;
+    }
+
+    /* Centro */
+    .todochido-center {
+      flex: 1 1 300px;
+      text-align: center;
+      font-family: 'Rationale', sans-serif;
+      color: #8a2be2;
+      font-size: 1.25rem;
+      animation: pulse 2s infinite;
+      line-height: 1.4;
+    }
+
+    .todochido-center strong {
+      color: #39ff14;
+      font-size: 1.3rem;
+    }
+
+    /* Derecha */
+    .todochido-right {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .todochido-right a img {
+      background-color: transparent;
+      width: 95px;
+      border-radius: 0.6rem;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .todochido-right a img:hover {
+      background-color: transparent;
+      transform: scale(1.07);
+      box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+      }
+      to {
+        text-shadow: 0 0 20px #8a2be2, 0 0 40px #8a2be2;
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.7;
+      }
+    }
+
+    @keyframes floatLogo {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .todochido-ad {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .todochido-left, .todochido-center, .todochido-right {
+        justify-content: center;
+      }
+
+      .todochido-left {
+        flex-direction: column;
+      }
+
+      .todochido-right a img {
+        width: 80px;
+      }
+
+      .todochido-center {
+        font-size: 1.1rem;
+      }
+
+      .todochido-center strong {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+
+  <div class="todochido-ad">
+    <!-- Izquierda -->
+    <div class="todochido-left">
+      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
+        <img src="logo.jpg" alt="Logo Todo Chido" class="logo" />
+      </a>
+      <div class="todochido-text">
+        <h1>Todo Chido</h1>
+        <p>Exprésate con tu ropa</p>
       </div>
     </div>
-  </section>
 
-  <!-- Contacto -->
-  <section id="contact" class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="fw-bold mb-4">Contacto</h2>
-      <p class="lead">¿Tienes un proyecto o necesitas ayuda? Escríbeme:</p>
-      <a href="mailto:imercoriasanchez@gmail.com" class="btn btn-dark btn-lg shadow">Enviar correo</a>
-      <a href="https://wa.me/5212221106016" target="_blank" class="btn btn-success btn-lg shadow ms-2">WhatsApp</a>
+    <!-- Centro -->
+    <div class="todochido-center">
+      15% de descuento en toda la tienda usando el cupón:<br />
+      <strong>Freelancer15</strong>
     </div>
-  </section>
+
+    <!-- Derecha -->
+    <div class="todochido-right">
+      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
+        <img src="prenda5.png" alt="Prenda 5" />
+      </a>
+      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
+        <img src="prenda6.png" alt="Prenda 6" />
+      </a>
+      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
+        <img src="prenda7.png" alt="Prenda 7" />
+      </a>
+      <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank">
+        <img src="prenda8.png" alt="Prenda 8" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Contacto -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Contacto</h2>
+    <p class="text-muted mb-4">Elige el medio que prefieras para contactarnos. Cotización sin costo ni compromiso.</p>
+
+    <!-- Campos para generar mensaje de WhatsApp -->
+    <div class="mx-auto" style="max-width:380px;">
+      <div class="mb-3">
+        <input type="text" class="form-control text-center" id="nombreWA" placeholder="Tu nombre">
+      </div>
+      <div class="mb-3">
+        <select class="form-select text-center" id="servicioWA">
+          <option value="" selected disabled>Selecciona el servicio</option>
+          <option>Diseño y Desarrollo Web</option>
+          <option>Clases Online</option>
+          <option>Soporte & Automatización Remota para PC</option>
+          <option>Producción y Edición de Videos</option>
+          <option>Diseño Publicitario y Branding</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mb-4">
+      <!-- Botón WhatsApp -->
+      <a id="whatsappLink" target="_blank"
+         class="btn btn-success px-4 py-2 rounded-pill fw-semibold shadow">
+         💬 Contactar por WhatsApp
+      </a>
+
+      <!-- Botón Correo (Google Form) -->
+      <a href="https://forms.gle/TU_LINK_AQUI" target="_blank"
+         class="btn btn-dark px-4 py-2 rounded-pill fw-semibold shadow">
+         📩 Contactar por Correo
+      </a>
+    </div>
+
+  <!-- Script para generar enlace dinámico de WhatsApp -->
+  <script>
+    const waLink = document.getElementById("whatsappLink");
+    const nombreWA = document.getElementById("nombreWA");
+    const servicioWA = document.getElementById("servicioWA");
+
+    function actualizarWhatsAppLink() {
+      const nombre = encodeURIComponent(nombreWA.value || "");
+      const servicio = encodeURIComponent(servicioWA.value || "");
+      const base = "https://wa.me/5212221106016?text=";
+      const mensaje = `¡Hola IC Freelancer! Mi nombre es: ${nombre}.%0AMe gustaría contratar el servicio: _${servicio}_.`;
+      waLink.href = base + mensaje;
+    }
+
+    nombreWA.addEventListener("input", actualizarWhatsAppLink);
+    servicioWA.addEventListener("change", actualizarWhatsAppLink);
+  </script>
+</section>
+
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">&copy; 2025 IC Freelancer. Todos los derechos reservados. Página desarrollada por IC Pages.</p>
+    <p class="mb-0">
+  &copy; 2025 
+  <a href="https://icpages.github.io/IC-Freelancer/" target="_blank" rel="noopener noreferrer">IC Freelancer</a>. 
+  Todos los derechos reservados. Página desarrollada por 
+  <a href="https://icpages.github.io/IC-Freelancer/" target="_blank" rel="noopener noreferrer">IC Pages</a>.
+</p>
+
   </footer>
 
   <!-- Bootstrap JS -->
