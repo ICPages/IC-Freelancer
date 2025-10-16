@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
     <div class="container">
@@ -30,6 +31,7 @@
       </div>
     </div>
   </nav>
+
   <!-- Hero -->
   <header id="home" class="hero d-flex align-items-center text-center text-white">
     <div class="container">
@@ -38,6 +40,7 @@
       <a href="#services" class="btn btn-primary btn-lg mt-3 shadow">Ver servicios</a>
     </div>
   </header>
+
 <!-- Sobre mí -->
 <section id="about" class="py-5 bg-light">
   <div class="container text-center">
@@ -56,6 +59,7 @@
     </p>
   </div>
 </section>
+
 <!-- Espacio publicitario 1 -->
 <div class="ad-space" aria-label="Espacio publicitario">
   <!-- Fuente -->
@@ -64,116 +68,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Courgette&family=Manufacturing+Consent&family=Rationale&family=Rock+Salt&display=swap"
     rel="stylesheet" />
-  <style>
-    .todochido-ad {
-      background-color: #0a0a0a;
-      color: #ffffff;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(57, 255, 20, 0.25);
-      animation: fadeIn 1s ease-in-out;
-      padding: 1rem 1.2rem;
-      font-family: 'Rationale', sans-serif;
-    }
-    /* Izquierda */
-    .todochido-left img.logo {
-      width: 75px;
-      border-radius: 0.5rem;
-      animation: floatLogo 3s ease-in-out infinite;
-      transition: transform 0.4s;
-    }
-    .todochido-left img.logo:hover {
-      transform: scale(1.08);
-    }
-    .todochido-text h1 {
-      font-family: 'Manufacturing Consent', sans-serif;
-      color: #39ff14;
-      font-size: 1.8rem;
-      letter-spacing: 1px;
-      margin: 0;
-      animation: glow 2s infinite alternate;
-    }
-    .todochido-text p {
-      font-family: 'Courgette', cursive;
-      color: #b0b0b0;
-      font-size: 1rem;
-      margin: 0;
-    }
-    /* Centro */
-    .todochido-center {
-      text-align: center;
-      font-size: 1.15rem;
-      color: #8a2be2;
-      animation: pulse 2s infinite;
-      line-height: 1.4;
-    }
-    .todochido-center strong {
-      color: #39ff14;
-      font-size: 1.3rem;
-    }
-    /* Derecha */
-    .todochido-right {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      flex-wrap: nowrap;
-    }
-    .todochido-right img {
-      width: 80px;
-      border-radius: 0.6rem;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .todochido-right img:hover {
-      transform: scale(1.07);
-      box-shadow: 0 0 12px rgba(138, 43, 226, 0.6);
-    }
-    /* Animaciones */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14; }
-      to { text-shadow: 0 0 20px #8a2be2, 0 0 40px #8a2be2; }
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.75; }
-    }
-    @keyframes floatLogo {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-    }
-    /* Responsivo */
-    @media (max-width: 768px) {
-      .todochido-ad {
-        text-align: center;
-        padding: 0.8rem;
-      }
-      .todochido-left {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 0.5rem;
-      }
-      .todochido-right {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 0.5rem;
-      }
-      .todochido-right img {
-        width: 65px;
-      }
-      .todochido-center {
-        font-size: 1rem;
-        line-height: 1.3;
-      }
-      .todochido-center strong {
-        font-size: 1.15rem;
-      }
-    }
-  </style>
+
   <div class="container-fluid todochido-ad">
     <div class="row align-items-center justify-content-between text-md-start text-center g-2">
+      
       <!-- Izquierda -->
       <div class="col-12 col-md-4 d-flex flex-column flex-md-row align-items-center todochido-left justify-content-md-start justify-content-center">
         <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank" class="me-md-2 mb-2 mb-md-0">
@@ -184,11 +82,13 @@
           <p>Exprésate con tu ropa</p>
         </div>
       </div>
+
       <!-- Centro -->
       <div class="col-12 col-md-4 todochido-center">
         15% de descuento en toda la tienda usando el cupón:<br />
         <strong>Freelancer15</strong>
       </div>
+
       <!-- Derecha -->
       <div class="col-12 col-md-4 todochido-right">
         <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda1.png" alt="Prenda 1"></a>
@@ -200,6 +100,7 @@
     </div>
   </div>
 </div>
+
   <!-- Servicios -->
   <section id="services" class="py-5">
     <div class="container text-center">
@@ -262,6 +163,7 @@
       </div>
     </div>
   </section>
+
   <!-- Asesorías y Cursos -->
   <section id="asesorias" class="py-5 bg-light">
     <div class="container">
@@ -319,10 +221,12 @@
       </div>
     </div>
   </section>
+
 <!-- Espacio publicitario 2 -->
 <div class="ad-space" aria-label="Espacio publicitario">
   <div class="container-fluid todochido-ad">
     <div class="row align-items-center justify-content-between text-md-start text-center g-2">
+      
       <!-- Izquierda -->
       <div class="col-12 col-md-4 d-flex flex-column flex-md-row align-items-center todochido-left justify-content-md-start justify-content-center">
         <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank" class="me-md-2 mb-2 mb-md-0">
@@ -333,11 +237,13 @@
           <p>Exprésate con tu ropa</p>
         </div>
       </div>
+
       <!-- Centro -->
       <div class="col-12 col-md-4 todochido-center">
         15% de descuento en toda la tienda usando el cupón:<br />
         <strong>Freelancer15</strong>
       </div>
+
       <!-- Derecha -->
       <div class="col-12 col-md-4 todochido-right">
         <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda5.png" alt="Prenda 5"></a>
@@ -345,14 +251,18 @@
         <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda7.png" alt="Prenda 7"></a>
         <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda8.png" alt="Prenda 8"></a>
       </div>
+
     </div>
   </div>
 </div>
+
+
 <!-- Contacto -->
 <section id="contact" class="py-5 bg-light">
   <div class="container text-center">
     <h2 class="fw-bold mb-4">Contacto</h2>
     <p class="text-muted mb-4">Elige el medio que prefieras para contactarnos. Cotización sin costo ni compromiso.</p>
+
     <!-- Campos para generar mensaje de WhatsApp -->
     <div class="mx-auto" style="max-width:380px;">
       <div class="mb-3">
@@ -370,18 +280,21 @@
       </div>
     </div>
   </div>
+
   <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mb-4">
       <!-- Botón WhatsApp -->
       <a id="whatsappLink" target="_blank"
          class="btn btn-success px-4 py-2 rounded-pill fw-semibold shadow">
          💬 Contactar por WhatsApp
       </a>
+
       <!-- Botón Correo (Google Form) -->
       <a href="https://forms.gle/TU_LINK_AQUI" target="_blank"
          class="btn btn-dark px-4 py-2 rounded-pill fw-semibold shadow">
          📩 Contactar por Correo
       </a>
     </div>
+
   <!-- Script para generar enlace dinámico de WhatsApp -->
   <script>
     const waLink = document.getElementById("whatsappLink");
@@ -395,10 +308,13 @@
       const mensaje = `¡Hola IC Freelancer! Mi nombre es: ${nombre}.%0AMe gustaría contratar el servicio: _${servicio}_.`;
       waLink.href = base + mensaje;
     }
+
     nombreWA.addEventListener("input", actualizarWhatsAppLink);
     servicioWA.addEventListener("change", actualizarWhatsAppLink);
   </script>
 </section>
+
+
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
     <p class="mb-0">
@@ -407,10 +323,13 @@
   Todos los derechos reservados. Página desarrollada por 
   <a href="https://icpages.github.io/IC-Freelancer/" target="_blank" rel="noopener noreferrer">IC Pages</a>.
 </p>
+
   </footer>
+
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Script personalizado -->
   <script src="script.js"></script>
 </body>
 </html>
+
