@@ -8,23 +8,23 @@
   <link rel="icon" type="image/png" href="IC Freelancer.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../estilos.css">
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
   <!-- Navbar (igual que index) -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="../index.html"><img src="IC Freelancer.png" alt="IC Freelancer" width="30" height="30" class="me-2">IC Freelancer</a>
+      <a class="navbar-brand fw-bold" href="index.html"><img src="IC Freelancer.png" alt="IC Freelancer" width="30" height="30" class="me-2">IC Freelancer</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="../index.html#about">Sobre mí</a></li>
-          <li class="nav-item"><a class="nav-link" href="../index.html#services">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="../index.html#asesorias">Asesorías</a></li>
-          <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#services">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#asesorias">Asesorías</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -34,7 +34,7 @@
   <div style="height:30px;"></div>
 
   <main class="container py-5">
-    <a href="../index.html#services" class="btn btn-light btn-back mb-4">&larr; Volver a Servicios</a>
+    <a href="index.html#services" class="btn btn-light btn-back mb-4">&larr; Volver a Servicios</a>
 
     <h1 class="fw-bold mb-3">Diseño y Desarrollo Web</h1>
     
@@ -99,33 +99,173 @@
   servicioWA.addEventListener("change", actualizarWhatsAppLink);
 </script>
 
-<!-- Espacio publicitario -->
-<div class="ad-space my-3 p-3 rounded-4 shadow-lg text-center position-relative" 
-     style="background: radial-gradient(circle at top left, #0A0A0A 20%, #1B1B1B 80%); color:#FFFFFF; font-family:'Rationale', sans-serif; overflow:hidden; border:2px solid #8A2BE2; box-shadow:0 0 15px #8A2BE2;">
-  
-  <!-- Partículas decorativas -->
-  <div class="neon-glow"></div>
+<!-- Espacio publicitario 2 -->
+<div class="ad-space" aria-label="Espacio publicitario">
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courgette&family=Manufacturing+Consent&family=Rationale&family=Rock+Salt&display=swap"
+    rel="stylesheet" />
 
-  <!-- Logo -->
-  <img src="logo.jpg" alt="Todo Chido" class="rounded-circle mb-2" 
-       style="width:60px; height:60px; object-fit:cover; border:2px solid #8A2BE2; animation: floatLogo 4s ease-in-out infinite;">
+  <style>
+    .todochido-ad {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(57, 255, 20, 0.25);
+      animation: fadeIn 1s ease-in-out;
+      padding: 1rem 1.2rem;
+      font-family: 'Rationale', sans-serif;
+    }
 
-  <!-- Título -->
-  <h2 style="font-family:'Rock Salt', cursive; font-size:22px; margin-bottom:6px; text-shadow:0 0 8px #39FF14, 0 0 15px #8A2BE2; animation: glowText 3s ease-in-out infinite alternate;">
-    ⚡ Todo Chido – Actitud y estilo ⚡
-  </h2>
+    /* Izquierda */
+    .todochido-left img.logo {
+      width: 75px;
+      border-radius: 0.5rem;
+      animation: floatLogo 3s ease-in-out infinite;
+      transition: transform 0.4s;
+    }
 
-  <!-- Texto -->
-  <p style="font-family:'Courgette', cursive; font-size:17px; color:#CCCCCC; margin-bottom:10px; animation: slideUp 1.2s ease-out;">
-    Ropa urbana, original y con flow. ¡Exprésate con estilo!
-  </p>
+    .todochido-left img.logo:hover {
+      transform: scale(1.08);
+    }
 
-  <!-- Botón -->
-  <a href="https://icpages.github.io/TodoChido/" target="_blank"
-     class="btn addCart mt-1"
-     style="background-color:transparent; color:#39FF14; border:2px solid #39FF14; font-size:16px; padding:8px 20px; border-radius:25px; text-transform:uppercase; letter-spacing:1px; font-family:'Rationale', sans-serif; animation: pulseBtn 2s infinite;">
-    Ir a la tienda
-  </a>
+    .todochido-text h1 {
+      font-family: 'Manufacturing Consent', sans-serif;
+      color: #39ff14;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      margin: 0;
+      animation: glow 2s infinite alternate;
+    }
+
+    .todochido-text p {
+      font-family: 'Courgette', cursive;
+      color: #b0b0b0;
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    /* Centro */
+    .todochido-center {
+      text-align: center;
+      font-size: 1.15rem;
+      color: #8a2be2;
+      animation: pulse 2s infinite;
+      line-height: 1.4;
+    }
+
+    .todochido-center strong {
+      color: #39ff14;
+      font-size: 1.3rem;
+    }
+
+    /* Derecha */
+    .todochido-right {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: nowrap;
+    }
+
+    .todochido-right img {
+      width: 80px;
+      border-radius: 0.6rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .todochido-right img:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 12px rgba(138, 43, 226, 0.6);
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14; }
+      to { text-shadow: 0 0 20px #8a2be2, 0 0 40px #8a2be2; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.75; }
+    }
+
+    @keyframes floatLogo {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .todochido-ad {
+        text-align: center;
+        padding: 0.8rem;
+      }
+
+      .todochido-left {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .todochido-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0.5rem;
+      }
+
+      .todochido-right img {
+        width: 65px;
+      }
+
+      .todochido-center {
+        font-size: 1rem;
+        line-height: 1.3;
+      }
+
+      .todochido-center strong {
+        font-size: 1.15rem;
+      }
+    }
+  </style>
+
+  <div class="container-fluid todochido-ad">
+    <div class="row align-items-center justify-content-between text-md-start text-center g-2">
+      
+      <!-- Izquierda -->
+      <div class="col-12 col-md-4 d-flex flex-column flex-md-row align-items-center todochido-left justify-content-md-start justify-content-center">
+        <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank" class="me-md-2 mb-2 mb-md-0">
+          <img src="logo.jpg" alt="Logo Todo Chido" class="logo" />
+        </a>
+        <div class="todochido-text">
+          <h1>Todo Chido</h1>
+          <p>Exprésate con tu ropa</p>
+        </div>
+      </div>
+
+      <!-- Centro -->
+      <div class="col-12 col-md-4 todochido-center">
+        15% de descuento en toda la tienda usando el cupón:<br />
+        <strong>Freelancer15</strong>
+      </div>
+
+      <!-- Derecha -->
+      <div class="col-12 col-md-4 todochido-right">
+        <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda5.png" alt="Prenda 5"></a>
+        <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda6.png" alt="Prenda 6"></a>
+        <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda7.png" alt="Prenda 7"></a>
+        <a href="https://icpages.github.io/TodoChidoCatalogo/" target="_blank"><img src="prenda8.png" alt="Prenda 8"></a>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 <!-- Animaciones -->
